@@ -12,8 +12,9 @@ export class UserProfileComponent implements OnInit {
   constructor(private gitSearchService: GitsearchService) { }
 
   ngOnInit() {
-    this.gitSearchService.getUserProfile().subscribe(res => {this.userProfile = res;
-      console.log(res); }
+    this.gitSearchService.getUserProfile().subscribe(res => {
+      this.userProfile = res;
+      console.log(res); });
   }
-} 
+}
 
