@@ -1,10 +1,37 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">
+          <span style="color: grey; font-size: 1.2em;">Git Search</span>
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <span style="color: white; font-size: 1.2em;">Home</span>
+        </a>
+      </li>
+    </ul>
+    <form class="ml-auto">
+      <input class="form-control mr-sm-1" type="text" placeholder="Enter a Github Username" name="username" [(ngModel)]="username"
+        (keyup)="searchUserProfile()">
+    </form>
+  </div>
+</nav>
+
 <div class="body">
-  <form>
+  <!-- <form>
     <div class="form-group">
       <input type="text" class="form-control" placeholder="Enter a Github Username" name="username" 
       [(ngModel)]="username" (keyup)="searchUserProfile()">
     </div>
-  </form>
+  </form> -->
+
 
   <div class='jumbotron'>
     <div class="row">
