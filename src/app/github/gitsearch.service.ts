@@ -15,6 +15,8 @@ export class GitsearchService {
     this.username = 'jameskimari';
    }
 getUserProfile() {
-  return this.http.get('https://api.github.com/sers/' + this.username + '?access_token=' + this.access_token);
+  return this.http.get('https://api.github.com/users/' + this.username + '?access_token=' + this.access_token)
+    .map(result => result);
+ 
 }
 }

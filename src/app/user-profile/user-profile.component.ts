@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GitsearchService } from '../github/gitsearch.service';
 
 @Component({
   selector: 'git-user-profile',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
+  userProfile: any = [];
 
-  constructor() { }
+  constructor(private gitSearchService: GitsearchService) { }
 
   ngOnInit() {
+    this.gitSearchService.getUserProfile().subscribe(res => {this.userProfile = res;
+      console.log(res); }
   }
+} 
 
-}
