@@ -8,7 +8,8 @@ import { GitsearchService } from './github/gitsearch.service';
 
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { RoutingModule } from './routing/routing/routing.module';
+import { RoutingModule } from './routing/routing.module';
+
 
 
 @NgModule({
