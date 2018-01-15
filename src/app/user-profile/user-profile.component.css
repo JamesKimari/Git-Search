@@ -40,3 +40,10 @@ strong {
 hr {
     border-style: outset;
 }
+
+.form-control {
+   width: 92%;
+   margin: 2% 0% 0% 4%;
+   background: linear-gradient(90deg, rgba(0, 188, 242, 0.2), rgba(0, 188, 242, 0.2) -180%, white);
+
+}

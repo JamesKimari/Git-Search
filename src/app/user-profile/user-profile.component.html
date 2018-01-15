@@ -1,8 +1,9 @@
 <div class="body">
-<form>
-  <div class="form-group">
-    <label for="SearchGithub" class="col-sm-2 col-form-label">search Github</label>
-</form>
+  <form>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Enter a username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
+    </div>
+  </form>
 
   <div class='jumbotron'>
     <div class="row">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitsearchService } from '../github/gitsearch.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'git-user-profile',

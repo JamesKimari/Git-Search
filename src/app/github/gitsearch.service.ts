@@ -11,7 +11,7 @@ export class GitsearchService {
   private access_token: string = environment.access_token;
 
   constructor(private http: HttpClient) {
-    //console.log('Service is ready!');
+    // console.log('Service is ready!');
     this.username = 'jameskimari';
    }
 getUserProfile() {
