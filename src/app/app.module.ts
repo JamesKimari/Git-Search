@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+
 import { GitsearchService } from './github/gitsearch.service';
 
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { RoutingModule } from './routing/routing/routing.module';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RoutingModule
   ],
   providers: [GitsearchService],
   bootstrap: [AppComponent]

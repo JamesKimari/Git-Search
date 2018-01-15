@@ -10,10 +10,17 @@ import { FormsModule } from '@angular/forms';
 export class UserProfileComponent implements OnInit {
   userProfile: any = [];
   repos: any = [];
+  username: string;
 
   constructor(private gitSearchService: GitsearchService) { }
 
   ngOnInit() {
+
+    }
+
+  searchUserProfile() {
+    this.gitSearchService.updateUserProfile(this.username);
+
     this.gitSearchService.getUserProfile().subscribe(users => {
       this.userProfile = users;
       console.log(users);

@@ -24,4 +24,8 @@ getUserProfile() {
       .map(result => result);
   }
 
+  updateUserProfile(username: string) {
+    this.username = username;
+  }
+
 }
