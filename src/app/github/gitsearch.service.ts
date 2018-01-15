@@ -20,7 +20,7 @@ getUserProfile() {
 }
 
   getUserRepos() {
-    return this.http.get('https://api.github.com/users/' + this.username + '/repos' + '?access_token=' + this.access_token)
+    return this.http.get('https://api.github.com/users/' + this.username  + '/repos?access_token=' + this.access_token)
       .map(result => result);
   }
 

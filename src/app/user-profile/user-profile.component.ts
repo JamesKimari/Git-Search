@@ -8,19 +8,19 @@ import { GitsearchService } from '../github/gitsearch.service';
 })
 export class UserProfileComponent implements OnInit {
   userProfile: any = [];
-  userRepos: any = [];
+  repos: any = [];
 
   constructor(private gitSearchService: GitsearchService) { }
 
   ngOnInit() {
-    this.gitSearchService.getUserProfile().subscribe(res => {
-      this.userProfile = res;
-      console.log(res);
+    this.gitSearchService.getUserProfile().subscribe(users => {
+      this.userProfile = users;
+      console.log(users);
     });
 
-    this.gitSearchService.getUserRepos().subscribe(res => {
-      this.userRepos = res;
-      console.log(res);
+    this.gitSearchService.getUserRepos().subscribe(repos => {
+      this.repos = repos;
+      console.log(repos);
     });
 
   }
