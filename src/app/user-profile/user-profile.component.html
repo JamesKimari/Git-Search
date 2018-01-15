@@ -2,11 +2,12 @@
   <div class="row">
     <div class="col-md-4">
       <h4 class='userName'><span style='color: dodgerblue'>{{userProfile.login}}</span></h4>
-      <img src="{{userProfile.avatar_url}}" alt="" class="img-responsive profile-img img-thumbnail">
+      <img src="{{userProfile.avatar_url}}" alt="Profile Image" class="img-responsive profile-img img-thumbnail">
       <br><br>  
-      <a class="btn btn-inverse" style="width: inherit;" href={{userProfile.hml_url}}> View Profile</a>    
+<a class="btn btn-inverse" style="width: inherit;" href={{userProfile.html_url}} target="_blank"> View Profile</a>
+
     </div>
-    <div class="col-md-6 offset-md-1">
+    <div class="col-md-6 offset-md-1" style="margin-top: 1em;">
       <span class="badge badge-primary">{{userProfile.followers}} Followers</span>
       <span class="badge badge-success">{{userProfile.following}} Following</span>
       <span class="badge badge-info">{{userProfile.public_repos}} Public Repos</span>
@@ -14,13 +15,13 @@
       <br><br><br>
       <p><strong>Username:</strong> {{userProfile.name}}</p>
       <hr>
-      <p><strong>Bio:</strong> {{userProfile.bio}}</p>
+      <p *ngIf="userProfile.bio"><strong>Bio:</strong> {{userProfile.bio}}</p>
       <hr>
-      <p><strong>Company:</strong> {{userProfile.company}}</p>
+      <p *ngIf="userProfile.company"><strong>Company:</strong> {{userProfile.company}}</p>
       <hr>
-      <p><strong>Location:</strong> {{userProfile.location}}</p>
+      <p *ngIf="userProfile.location"><strong>Location:</strong> {{userProfile.location}}</p>
       <hr>
-      <p><strong>Email:</strong> {{userProfile.email}}</p>
+      <p *ngIf="userProfile.email"><strong>Email:</strong> {{userProfile.email}}</p>
       <hr>
       <p><strong>Joined in:</strong> {{userProfile.created_at}}</p>
     </div>
